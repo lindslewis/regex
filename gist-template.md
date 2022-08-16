@@ -2,9 +2,17 @@
 
 Regular expressions, or regexes, allow users to have a less restrictive search field, opening up their searches to broader and more dynamic search variables. A regex is made up of a string of characters to define a pattern for said search.
 
+The characters used in a regex include letters, digits, and special characters.
+
 ## Summary
 
 Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
+The regex that we will be looking over today is for "Matching Hex Values." 
+
+This string of characters for the search pattern is as follows:
+
+`/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
+
 
 ## Table of Contents
 
@@ -20,10 +28,27 @@ Briefly summarize the regex you will be describing and what you will explain. In
 ## Regex Components
 
 ### Anchors
-literal vs meta characters
-. means any char
-* is 0 or more
-.* is often referred to as a wildcard
+
+The anchors, `^` and `$`, are both used in the Matching Hex Values regex pattern.
+
+The carrot, `^`, indicates the beginning of a line or string. This indication shows that the following character must show at the beginning of the string.
+
+The `$` anchor is used to designate the end of a string. 
+
+For example,
+
+`/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
+
+The pound sign following the carrot (`^#`), indicates that the beginning of all hex codes that are attempting to be matched must beginning with a pound sign.
+
+`#ff748c`
+
+`#000bad`
+
+The two above hex codes illustrate this, that they both utilize a pound sign right before their character string that defines their color. 
+
+Regarding the end of string anchor, `$`, the hex code requires the end of the string to be everything contained within the parantheses.
+
 ### Quantifiers
 
 ### Grouping Constructs
