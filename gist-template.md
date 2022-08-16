@@ -63,6 +63,16 @@ In the code, we see the quantifiers `{6}` and `{3}`. Quantifiers refer to the ob
 
 ### Grouping Constructs
 
+Grouping constructs in regex expressions refer to the capture of characters within a pair of parantheses. 
+
+If a pattern lives within a pair of parantheses in a regex expression, then that pattern will be captured as a group, meaning all of those characters within that group will be used in the sorting of the data within the search parameters. 
+
+In the case of our hex value patterns, we have one set of parantheses, and can be seen below:
+
+`([a-f0-9]{6}|[a-f0-9]{3})`
+
+Since the paranthesis makes up the majority of the regex pattern. This particular pattern utilizes an [OR expression](#the-or-operator), which we will cover soon, however that means there will be some variability in what is covered by the grouped characters. ;
+
 ### Bracket Expressions
 
 ### Character Classes
