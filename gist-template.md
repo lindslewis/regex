@@ -6,12 +6,13 @@ The characters used in a regex include letters, digits, and special characters.
 
 ## Summary
 
-Briefly summarize the regex you will be describing and what you will explain. Include a code snippet of the regex. Replace this text with your summary.
 The regex that we will be looking over today is for "Matching Hex Values." 
 
 This string of characters for the search pattern is as follows:
 
 `/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
+
+I will be reviewing this regex's anchors, quantifiers, grouping constructs, bracket expressions, character classes, flags, escapes and the OR operator and how each of these pertains to matching matching hex code values.
 
 
 ## Table of Contents
@@ -50,6 +51,15 @@ The two above hex codes illustrate this, that they both utilize a pound sign rig
 Regarding the end of string anchor, `$`, the hex code requires the end of the string to be everything contained within the parantheses.
 
 ### Quantifiers
+
+Regex quantifiers include:
+`+`, `?`, `*`, and `{X, Y}`.
+
+Our example code for matching hex values contains several quantifiers. 
+
+In our matching hex values regex code snippet, there are two iterations of the last quantifier, the `{x, y}`. This quantifier refers to x being the least amount of times a character repeats, while y refers to the most amount of times said character may repeat. 
+
+In the code, we see the quantifiers `{6}` and `{3}`. Quantifiers refer to the objects living to their left, so the six is in direct reference to the object living within the brackets, `[a-f0-9]` and the three is in direct reference to it's own bracketed object of the same value. Since there is no y value found in these instances, that means that the first one will repeat *exactly* six times, and the second will repeat *exactly* three times. Those repetitions may all be the same character, or, since their referenced code is a [bracket expression](#bracket-expressions), which we will discuss shortly, it may be any characters within that bracket expressions iterated range.
 
 ### Grouping Constructs
 
