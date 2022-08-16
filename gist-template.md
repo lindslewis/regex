@@ -1,6 +1,6 @@
-# Title (replace with your title)
+# Regex: Matching Hex Values 
 
-Introductory paragraph (replace this with your text)
+Regular expressions, or regexes, allow users to have a less restrictive search field, opening up their searches to broader and more dynamic search variables. A regex is made up of a string of characters to define a pattern for said search.
 
 ## Summary
 
@@ -20,7 +20,10 @@ Briefly summarize the regex you will be describing and what you will explain. In
 ## Regex Components
 
 ### Anchors
-
+literal vs meta characters
+. means any char
+* is 0 or more
+.* is often referred to as a wildcard
 ### Quantifiers
 
 ### Grouping Constructs
@@ -37,4 +40,8 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ## Author
 
-This walkthrough was created by Lindsay Lewis, a student full-stack web developer with the University of Washington. You can find Lindsay spending her free time partaking in various fiber crafts, enjoying a quiet evening playing games, and tinkering away at her growing coding skills.
+This walkthrough was created by [Lindsay Lewis](https://github.com/lindslewis), a student full-stack web developer with the University of Washington. 
+
+Lindsay is based out of Portland, Oregon. She is an Oregon State University English Literature alumni transitioning into the programming world.
+
+You can find Lindsay spending her free time partaking in various fiber crafts, enjoying a quiet evening playing games, and tinkering away at her growing coding skills.
