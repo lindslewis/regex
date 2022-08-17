@@ -115,9 +115,31 @@ The above hex codes represent a light salmon pink and lavender. If written in lo
 
 ### Character Classes
 
+Character classes, also referred to as character sets, will inform the search engine only to match specific characters. 
+
+Character classes are defined within brackets, as seen above, to narrow down the search based off of the characters that live inside the brackets. These classes can be as narrow as a duo of characters to search for (`[bc]at`, which would produce either `bat` or `cat`), can be a singular range (`[0-9]`, to find any *one* integer between 0 and 9), and can also include multiple ranges, which is the case for the hex value pattern (`[a-f0-9]`). 
+
+This way, when matching hex values, the search knows to *only* include objects that fit within those character classes.
+
+For example,
+
+`#ff99099` vs `#zh99Ga`
+
+The first fits within the parameters set by the character classes, as the letters are lower case, and do not go beyond the letter f. While the second one would not bring up a match for hex values, as the letters are beyond f and have an uppercase character. 
+
 ### The OR Operator
 
+The OR operator simply allows for more variability. In the case of hex values, it operates to make it so the quantifier will either be set at 6 or at 3, and both would be valid, as long as the rest of the parameters set also fit. 
+
+`/^#?([a-f0-9]{6}|[a-f0-9]{3})$/`
+
+This operator can be seen after the quantifier for the first bracket expression, the 6, and before the next bracket expression. Simply saying, it is an `and/or` for our regex parameters.
+
+Both `#ff0000` and `#f46` would match in the regex search, thanks to the OR operator.
+
 ### Flags
+
+
 
 ### Character Escapes
 
@@ -125,6 +147,8 @@ The above hex codes represent a light salmon pink and lavender. If written in lo
 
 This walkthrough was created by [Lindsay Lewis](https://github.com/lindslewis), a student full-stack web developer with the University of Washington. 
 
+
 Lindsay is based out of Portland, Oregon. She is an Oregon State University English Literature alumni transitioning into the programming world.
 
-You can find Lindsay spending her free time partaking in various fiber crafts, enjoying a quiet evening playing games, and tinkering away at her growing coding skills.
+
+You can find her spending her free time partaking in various fiber crafts, enjoying a quiet evening playing games, and tinkering away at her growing coding skills.
